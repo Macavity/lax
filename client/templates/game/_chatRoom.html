@@ -1,0 +1,18 @@
+<template name="chatRoom">
+    <div id="chat-input" class="row">
+        <input type="text" class="chat-input">
+    </div>
+    <div id="chat-history">
+        {{#each messages}}
+            <div class="message row">
+                <a href="" class="shoutbox-user">
+                    <img src="{{avatar}}" class="shoutbox-avatar">
+                    {{name}}
+                </a>
+                <span class="message_timestamp">12:15</span>
+                <span class="message_star"></span>
+                <span class="message_content">{{text}}</span>
+            </div>
+        {{/each}}
+    </div>
+</template>

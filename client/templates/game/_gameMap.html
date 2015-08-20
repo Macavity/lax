@@ -1,0 +1,39 @@
+<template name="gameMap">
+{{!
+<script type="text/javascript" src="{MAP_DATA_FILE}"><!-- (c) Macavity --></script>
+<script type="text/javascript" src="{MAP_FT_FILE}"><!-- (c) Macavity --></script>
+<script type="text/javascript" src="includes/{JSCRIPT_FILE}"><!-- (c) Macavity --></script>
+{MONSTER_SOURCE}
+}}
+    <div id="td_map" style="visibility:hidden;">
+        <div id="frame" style="position:relative;" align="center">
+            <div id="bg_layer" style="position:absolute;">
+                <table id="tbl_bg" border="0" cellpadding="0" cellspacing="0">
+                    <colgroup width="32" height="32" span="{{col_num}}">
+                    </colgroup>
+                    {{bg_table}}
+                </table>
+            </div>
+            <div id="chara_layer" style="position:absolute; top: {{$top}}px; left: {{$left}}px;">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <colgroup width="32" height="32" span="{{col_num}}">
+                    </colgroup>
+                    {{chara_table}}
+                </table>
+            </div>
+        </div>
+    </div>
+    {{!
+    <span id="td_fight">&nbsp;</span>
+    <span id="outer_fight">&nbsp;</span>
+    <span id="td_status_bars">&nbsp;</span>
+    <span id="debug">&nbsp;</span>
+    <span id="js_others">&nbsp;</span>
+    <span id="i_map_name">&nbsp;</span>
+    <span id="i_map_id">&nbsp;</span>
+    <span id="ajax_return">&nbsp;</span>
+    }}
+    {{#if isDeveloper}}
+        <br /><input type="checkbox" name="chk_mobs" id="chk_mobs" value="1" checked="checked"/> Mobs?
+    {{/if}}
+</template>

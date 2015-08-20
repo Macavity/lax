@@ -1,0 +1,35 @@
+<template name="statusBars">
+    <div class="row">
+        <div class="col-md-6">
+            <b data-toggle="tooltip" data-placement="top" title="Lebenspunkte">HP</b>:
+        </div>
+        <div class="col-md-6">
+            {{> getBar hpBar}}
+        </div>
+    </div>
+    <table>
+        <tr>
+            <td class="gensmall">
+            </td>
+        </tr>
+        <tr class="gensmall">
+            <td class="gensmall">
+                <a href="http://www.last-anixile.de/wiki/index.php/LPG:Substats#SP">SP</a>:
+            </td>
+            <td>{{> progressBar spBar}}</td>
+        </tr>
+        <tr class="gensmall">
+            <td class="gensmall">
+                <a href="http://www.last-anixile.de/wiki/index.php/LPG:PL">PL</a>:</td>
+            <td>{{> progressBar plBar}}</td>
+        </tr>
+        <tr class="gensmall">
+            <td class="gensmall" nowrap="nowrap">B Exp:</td>
+            <td>{{> progressBar classExpBar}}</td>
+        </tr>
+        <tr class="gensmall">
+            <td class="gensmall" nowrap="nowrap">J Exp:</td>
+            <td>{{> progressBar jobExpBar}}</td>
+        </tr>
+    </table>
+</template>

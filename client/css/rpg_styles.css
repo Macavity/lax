@@ -1,0 +1,53 @@
+/* CSS Document */
+.image_layer_center{
+	position:relative;
+	z-index:3;
+	top:9px;
+}
+.lay_chara{
+	top:0px;
+	width:32px;
+	height:32px; 
+	position:absolute; 
+	z-index:3;
+}
+.lay_over_chara{
+	top:0px;
+	left:15px;
+	width:32px; 
+	height:32px; 
+	position:absolute; 
+	z-index:5;
+}
+.lay_span{
+	position:relative;
+	/*text-align:left;
+	border:1px solid #FF0000; 
+	vertical-align:top;*/
+	top:-6px !important; 
+	top:-14px;
+	left:-0px !important;
+	left:-6px;
+}
+.lay_span1{
+	position:absolute; 
+	z-index:1;
+	top:-10px; 
+	left:2px;
+}
+.lay_span2{
+	position:absolute;
+	z-index:2;
+	top:-10px; 
+	left:2px;
+}
+.lay_span3{
+	position:absolute;
+	z-index:3;
+	top:-10px; 
+	left:2px;
+}
+.lay_span4{
+	position:absolute;
+	z-index:4;
+}
