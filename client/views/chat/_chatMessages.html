@@ -1,0 +1,17 @@
+<template name="chatMessages">
+    {{#if Template.subscriptionsReady}}
+        {{#each messages}}
+            <div class="message row">
+                <a href="" class="shoutbox-user">
+                    <img src="{{charAvatar}}" class="shoutbox-avatar">
+                    {{charName}}
+                </a>
+                <span class="message_timestamp">{{timestampToTime createdAt}}</span>
+                <span class="message_star"></span>
+                <span class="message_content">{{text}}</span>
+            </div>
+        {{/each}}
+    {{else}}
+        Loading Chat..
+    {{/if}}
+</template>

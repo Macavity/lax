@@ -1,7 +1,12 @@
 
+
 var roundNumber = function(num, precision) {
     return Math.round(num * Math.pow(10, precision)) / Math.pow(10, precision).toFixed(precision);
 };
+
+function isNumber (o) {
+    return ! isNaN (o-0) && o !== null && o !== "" && o !== false;
+}
 
 var getBar = function(name, valueFull, valueMax, colorFull, colorEmpty, viewType){
     var maxValue = valueMax + (valueFull/100 * 5);
@@ -71,4 +76,4 @@ var getBar = function(name, valueFull, valueMax, colorFull, colorEmpty, viewType
         $bar += " "+conditionalBreak+"<b>"+valueFull+labelSuffix+"</b>&nbsp;&nbsp;&nbsp;";
     }
     return $bar;
-}
+};

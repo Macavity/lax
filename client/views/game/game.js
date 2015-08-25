@@ -52,3 +52,4 @@ Template.statusBars.helpers({
         }
     }
 });
+

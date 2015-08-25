@@ -1,0 +1,29 @@
+<template name="adminWorld">
+    <h1>Administrate World Maps</h1>
+
+    {{#if canCreateMaps}}
+        <div class="row">
+            <form class="form-inline well">
+                <h3>Create new Map</h3>
+                <div class="form-group">
+                    <label for="exampleInputName2">Name</label>
+                    <input type="text" class="form-control" id="newMapName" placeholder="Name of the map">
+                </div>
+                <button id="btnCreateMap" type="button" class="btn btn-default createMap">Create</button>
+            </form>
+        </div>
+    {{/if}}
+    {{#each maps}}
+        <div class="row">
+            <div class="col-md-4">{{name}}</div>
+            <div>
+                <input type="file" name="mapUpload" class="mapUpload">
+                <button class="addClaim" data-map="{{id}}">Add Claim to Map</button>
+            </div>
+        </div>
+    {{/each}}
+
+
+    <button id="btnAddMap">Add Map</button>
+
+</template>

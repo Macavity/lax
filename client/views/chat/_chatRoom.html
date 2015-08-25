@@ -1,0 +1,45 @@
+<template name="chatRoom">
+    <div id="chat-header" class="row">
+        <div class="char-select col-md-2">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{activeCharName}} <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    {{#each myCharacters}}
+                        {{#unless active}}
+                            <li class="switchChar" data-id="{{_id}}"><a href="#">{{name}}</a></li>
+                        {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="input-group">
+                <input id="chat-input" type="text" class="form-control" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="basic-addon2">#{{channelName}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="listings row">
+        <div class="listings-channels col-md-2">
+            <h2>Channels</h2>
+            <ul>
+                {{#each channels}}
+                <li class="channel {{#if isActive}}active{{/if}}">
+                    <span class="unread">
+                        {{unread}}
+                    </span>
+                    <span>
+                        <span class="prefix">#</span>
+                        <span class="channel-name">{{name}}</span>
+                    </span>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-md-10">
+            {{> chatMessages}}
+        </div>
+    </div>
+</template>
