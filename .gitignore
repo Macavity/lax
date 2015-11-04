@@ -1,2 +1,6 @@
 .meteor/local
 .meteor/meteorite
+.static/avatars
+.static/items
+.static/images
+.static/bg
